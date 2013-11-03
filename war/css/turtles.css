@@ -1,0 +1,88 @@
+/* Global Resets
+********************************************************/
+
+
+/* Custom Styles
+********************************************************/
+.inline-top {
+	display: inline-block;
+	vertical-align: top;
+}
+
+p.essay {
+	margin: 2em 0 2em 0;
+	text-align: justify;
+}
+
+.space-top {
+	margin-top: 2em;
+}
+
+/* Footer
+********************************************************/
+
+#footer {
+	margin: 2em 0 0 0;
+	padding-bottom: 4em;
+	background-color: #333333;
+	color: #ffffff;
+	height: 10em;
+}
+
+#footer p {
+	margin: 1em 0 0 0;
+}
+
+/* Social Buttons
+********************************************************/
+#fb-like-button {
+	margin-right: 2em;
+}
+
+#fb-like-button,#gplus-button,#tweet-button {
+	margin-top: 1em;
+}
+
+/* Google UI CSS Classes
+********************************************************/
+
+/* Prevents dropdown box from overflowing */
+
+.goog-menu-vertical {
+	max-height: 30em;
+	overflow-y: auto;
+	z-index: 15;
+}
+
+/* Charts
+********************************************************/
+
+.chart {
+	margin: 1em 0 0 0;
+	height: 25em;
+}
+
+.chart.chart-tall {
+	height: 35em;
+}
+
+.slider.control {
+	margin: 0 0 1em 0;
+	height: 6em;
+}
+
+.dashboard {
+	margin: 3em 0 3em 0;
+}
+
+.dashboard p.caption {
+	margin: 1em 0 0 0;
+}
+
+.control.inline-top {
+	margin: 0 1em 0 0;
+}
+
+#coe-quotas-chart1.chart {
+	height: 30em;
+}
