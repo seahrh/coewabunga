@@ -182,7 +182,7 @@ Turtles.Viz.Quotas.dashboard = function(response) {
 		"containerId" : "coe-quotas-chart1",
 		"chartType" : "ComboChart",
 		"options" : {
-			"title" : "COE Quotas",
+			"title" : "COE Quotas, Bids Received and Prices",
 			"titleTextStyle" : {
 				"fontSize" : 16
 			},
@@ -199,7 +199,7 @@ Turtles.Viz.Quotas.dashboard = function(response) {
 			},
 			"hAxis" : {
 				"textPosition" : "out",
-				"format" : "MMM yyyy",
+				"format" : "yyyy",
 				"textStyle" : {
 					"fontSize" : 14
 				}
@@ -214,23 +214,22 @@ Turtles.Viz.Quotas.dashboard = function(response) {
 			"chartArea" : {
 				"width" : "85%",
 				"height" : "80%",
-				"left" : 45,
+				"left" : 60,
 				"top" : 45
 			},
 			"focusTarget" : "category",
+			"isStacked" : true,
 			"series" : {
 				0 : {
-					"type" : "bars"
+					"type" : "bars",
 				},
 				1 : {
-					"type" : "bars"
+					"type" : "bars",
 				},
 				2 : {
-					"type" : "bars"
-				},
-				3 : {
 					"type" : "line",
-					"targetAxisIndex" : 1
+					"targetAxisIndex" : 1,
+					"color" : "green"
 				}
 			}
 
@@ -239,7 +238,7 @@ Turtles.Viz.Quotas.dashboard = function(response) {
 	});
 
 	chart.setView({
-		'columns' : [ 0,3,4,5,6]
+		'columns' : [ 0,3,4,6]
 	});
 	
 	dashboard.bind([ yearControl, categoryControl ], [ chart ]);
