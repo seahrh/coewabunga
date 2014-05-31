@@ -9,10 +9,7 @@ Turtles.Viz.Prices = {
 Turtles.Viz.Prices.query = function() {
 	var query = new google.visualization.Query(Turtles.Viz.Prices.dataSourceUrl);
 	
-	query.setQuery("select B, min(F) "
-			+ "where D != 'Category D (Motorcycles)' "
-			+ "group by B pivot D order by B "
-			+ "format B 'd MMM yyyy', min(F) '$#,###' ");
+	query.setQuery("select B, min(F) group by B pivot D order by B format B 'd MMM yyyy', min(F) '$#,###' ");
 	
 	query.send(Turtles.Viz.Prices.dashboard);
 };
@@ -77,33 +74,62 @@ Turtles.Viz.Prices.dashboard = function(response) {
 			"titleTextStyle" : {
 				"fontSize" : 16
 			},
-			"vAxis" : {
-				"title" : "",
-				"textPosition" : "in"
-			// "minValue" : 0,
-			// "maxValue" : 400,
-			// "gridlines" : {"count" : 5}
+			"vAxes" : {
+				0 : {
+					"title" : "COE Prices of Cars (All Categories except D)",
+					"textPosition" : "in",
+					"format" : "$#,###",
+					"titleTextStyle" : {
+						"italic" : false
+					}
+				},
+				1 : {
+					"title" : "COE Prices of Motorcycles (Category D)",
+					"textPosition" : "in",
+					"format" : "$#,###",
+					"titleTextStyle" : {
+						"italic" : false
+					}
+				}
 			},
 			"hAxis" : {
 				"textPosition" : "none",
 				"textStyle" : {
-					"fontSize" : 14
+					"fontSize" : 16
 				}
 			},
 			"legend" : {
 				"position" : "top",
 				"alignment" : "left",
 				"textStyle" : {
-					"fontSize" : 13
+					"fontSize" : 14
 				}
 			},
 			"chartArea" : {
-				"width" : "99%",
-				"height" : "90%",
-				"left" : 0,
-				"top" : 40
+				"width" : "90%",
+				"height" : "95%",
+				"left" : 60,
+				"top" : 45
 			},
-			"focusTarget" : "category"
+			"focusTarget" : "category",
+			"series" : {
+				0 : {
+					"type" : "line",
+				},
+				1 : {
+					"type" : "line",
+				},
+				2 : {
+					"type" : "line",
+				},
+				3 : {
+					"type" : "line",
+					"targetAxisIndex" : 1
+				},
+				4 : {
+					"type" : "line"
+				}
+			}
 			
 
 		}
@@ -155,7 +181,7 @@ Turtles.Viz.Quotas.dashboard = function(response) {
 			},
 		},
 		"state" : {
-			"selectedValues" : ["Category A (Cars 1600cc and below)"]
+			"selectedValues" : ["Cat A (Cars up to 1600cc and 97kW)"]
 		}
 	});
 
@@ -257,7 +283,7 @@ Turtles.Viz.QuotasYearly.query = function() {
 	
 	query.setQuery("select C, D, sum(E), max(F), avg(F)"
 			+ "group by C, D "
-			+ "label D 'Category', C 'Year', sum(E) 'Yearly Quota', max(F) 'Maximum Price', avg(F) 'Average Price' "
+			+ "label D 'Category', C 'Year', sum(E) 'Yearly Quota', max(F) 'Highest Price', avg(F) 'Average Price' "
 			+ "format sum(E) '#,###', max(F) '$#,###', avg(F) '$#,###' ");
 	
 	query.send(Turtles.Viz.QuotasYearly.dashboard);
@@ -286,7 +312,7 @@ Turtles.Viz.QuotasYearly.dashboard = function(response) {
 			},
 		},
 		"state" : {
-			"selectedValues" : ["Category A (Cars 1600cc and below)"]
+			"selectedValues" : ["Cat A (Cars up to 1600cc and 97kW)"]
 		}
 	});
 
@@ -330,7 +356,7 @@ Turtles.Viz.QuotasYearly.dashboard = function(response) {
 			"chartArea" : {
 				"width" : "85%",
 				"height" : "80%",
-				"left" : 50,
+				"left" : 60,
 				"top" : 45
 			},
 			"focusTarget" : "category",
