@@ -23,14 +23,13 @@ p.essay {
 
 #footer {
 	margin: 2em 0 0 0;
-	padding-bottom: 4em;
+	padding-bottom: 2em;
 	background-color: #333333;
 	color: #ffffff;
-	height: 10em;
 }
 
 #footer p {
-	margin: 1em 0 0 0;
+	margin: 2em 0 0 0;
 }
 
 /* Social Buttons
