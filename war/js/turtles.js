@@ -40,7 +40,9 @@ Turtles.Viz.Prices.dashboard = function(response) {
 				"chartOptions" : {
 					"enableInteractivity" : false,
 					"chartArea" : {
-						"height" : "100%"
+						"height" : "100%",
+						"width" : "85%", /* Align with main chart's width */
+						"left" : 60 /* Align with main chart's left margin */
 					},
 					"legend" : {
 						"position" : "none"
@@ -93,20 +95,18 @@ Turtles.Viz.Prices.dashboard = function(response) {
 				}
 			},
 			"hAxis" : {
-				"textPosition" : "none",
-				"textStyle" : {
-					"fontSize" : 16
-				}
+				"textPosition" : "in",
+				"format" : "MMM y"
 			},
 			"legend" : {
 				"position" : "top",
 				"alignment" : "left",
 				"textStyle" : {
-					"fontSize" : 14
+					"fontSize" : 12
 				}
 			},
 			"chartArea" : {
-				"width" : "90%",
+				"width" : "85%",
 				"height" : "95%",
 				"left" : 60,
 				"top" : 45
@@ -226,8 +226,9 @@ Turtles.Viz.Quotas.dashboard = function(response) {
 			"hAxis" : {
 				"textPosition" : "out",
 				"format" : "yyyy",
-				"textStyle" : {
-					"fontSize" : 14
+				"gridlines" : {
+					"color" : "transparent",
+					"count" : 7 /* Number of years divided by 2 */
 				}
 			},
 			"legend" : {
@@ -238,7 +239,7 @@ Turtles.Viz.Quotas.dashboard = function(response) {
 				}
 			},
 			"chartArea" : {
-				"width" : "85%",
+				"width" : "80%", /* enough space to display alt v-axis on 768x1024 */ 
 				"height" : "80%",
 				"left" : 60,
 				"top" : 45
@@ -339,11 +340,9 @@ Turtles.Viz.QuotasYearly.dashboard = function(response) {
 			"hAxis" : {
 				"textPosition" : "out",
 				"format" : "#",
-				"textStyle" : {
-					"fontSize" : 14
-				},
 				"gridlines" : {
-					"count" : 6
+					"color" : "transparent",
+					"count" : 7 /* Number of years divided by 2 */
 				}
 			},
 			"legend" : {
@@ -354,7 +353,7 @@ Turtles.Viz.QuotasYearly.dashboard = function(response) {
 				}
 			},
 			"chartArea" : {
-				"width" : "85%",
+				"width" : "80%", /* enough space to display alt v-axis on 768x1024 */
 				"height" : "80%",
 				"left" : 60,
 				"top" : 45
