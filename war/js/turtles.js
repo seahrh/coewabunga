@@ -755,7 +755,7 @@ Turtles.Viz.Population.Cars = {
 Turtles.Viz.Population.Cars.query = function() {
 	var query = new google.visualization.Query(Turtles.Viz.Population.Cars.dataSourceUrl);
 
-	query.setQuery("select A, L, K, J, I, H, G, F, E, D, C, B "
+	query.setQuery("select A, B, C, D, E, F, G, H, I, J, K, L "
 			+ "order by A "
 			+ "label A 'Brand' ");
 
