@@ -209,9 +209,7 @@ Turtles.Viz.Quotas = {
 Turtles.Viz.Quotas.query = function() {
 	var query = new google.visualization.Query(Turtles.Viz.Quotas.dataSourceUrl);
 
-	query.setQuery("select B, C, D, E, G, H, F " + "order by B "
-			+ "label D 'Category', C 'Year', F 'Price' "
-			+ "format B 'd MMM yyyy', F '$#,###' ");
+	query.setQuery("select B, C, D, E, G, H, F order by B label D 'Category', C 'Year', F 'Price' format B 'd MMM yyyy', F '$#,###' ");
 
 	query.send(Turtles.Viz.Quotas.dashboard);
 };
