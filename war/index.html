@@ -1,57 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta itemprop="name" content="COE Trends">
-        <meta itemprop="description" content="COE Trends">
-        <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
         <!-- Facebook Open Graph tags -->
-        <meta property="og:title"
-        content="COE Trends" />
+        <meta property="og:title" content="COE Trends" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="http://coe.sgcharts.com/" />
         <meta property="og:image" content="" />
         <meta property="og:site_name" content="COE Trends" />
         <!-- /Facebook Open Graph tags -->
+        <meta itemprop="name" content="COE Trends">
+        <meta itemprop="description" content="COE Trends">
         <title>COE Trends</title>
         <link rel="canonical" href="http://coe.sgcharts.com/">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
-        type="text/css">
-        <link rel="stylesheet" href="css/turtles.css" type="text/css">
-        <script type="text/javascript"
-        src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] ||
-                function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-43489946-1', 'auto');
-            ga('send', 'pageview');
-        </script>
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/turtles.css" type="text/css">
+        <script src="/js/ga.js"></script>
     </head>
     <body>
         <!-- Javascript SDK for Facebook Like Button HTML5 Plugin -->
         <div id="fb-root"></div>
-        <script>
-            ( function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id))
-                        return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-        </script>
+        <script src="/js/fb-like.js"></script>
         <!-- /Javascript SDK for Facebook Like Button HTML5 Plugin -->
         <nav class="navbar navbar-default" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -220,17 +193,15 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <p>
-                            <small>Feedback to seahrh (at) gmail (dot) com. Join the <a
-                                href="//sgratrace.appspot.com/" target="_blank">Great
-                                Singapore Rat Race</a> </small>
+                            <small>Feedback to admin (at) sgcharts (dot) com. Join the <a
+                                href="http://pay.sgcharts.com/" target="_blank">Great
+                                Singapore Rat Race</a>! </small>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/turtles.js"></script>
-        <script type="text/javascript" src="js/spin.min.js"></script>
+        <!-- Below the fold -->
         <!-- Required for loading Google Visualization API -->
         <script type="text/javascript" src="//www.google.com/jsapi"></script>
         <script type="text/javascript">
@@ -244,6 +215,10 @@
                 Turtles.Viz.QuotasYearly.query();
             });
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/turtles.js"></script>
+        <script type="text/javascript" src="/js/spin.min.js"></script>
         <script type="text/javascript">
             // Show a spinning load indicator
             // while the page is loading
