@@ -24,38 +24,30 @@ p.essay {
 .space-top {
 	margin-top: 4em;
 }
-
-/* Footer
-********************************************************/
-
-#footer {
-	margin: 2em 0 0 0;
-	padding-bottom: 2em;
-	background-color: #333333;
-	color: #ffffff;
+.f-size-11 {
+	font-size: 1.1em;
 }
-
-#footer p {
-	margin: 2em 0 0 0;
+.f-paper-indigo-500 {
+	color:#3f51b5 !important;
 }
-
-/* Social Buttons
-********************************************************/
-#fb-like-button {
-	margin-right: 2em;
+.divider-x {
+	height: 1px;
+	margin: 8px 0;
 }
-
-#fb-like-button,#gplus-button,#tweet-button {
-	margin-top: 1em;
+.paper-grey-400 {
+	background-color:#bdbdbd !important;
 }
-
+.p-x-30 {
+	padding-left: 30px;
+	padding-right: 30px;
+}
 /* Google UI CSS Classes
 ********************************************************/
 
 /* Prevents dropdown box from overflowing */
 
-.goog-menu-vertical {
-	max-height: 30em;
+.charts-menu-vertical {
+	max-height: 200px;
 	overflow-y: auto;
 	z-index: 15;
 }

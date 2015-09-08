@@ -881,11 +881,12 @@ Turtles.Viz.Population.Cars.dashboard = function(response) {
                 "labelStacking" : "horizontal",
                 "allowTyping" : true,
                 "allowMultiple" : true,
-                "selectedValuesLayout" : "aside"
+                "selectedValuesLayout" : "aside",
+                "caption" : "start typing..."
             },
         },
         "state" : {
-            "selectedValues" : ["FERRARI", "LAMBORGHINI", "MASERATI", "ROLLS ROYCE", "ASTON MARTIN"]
+            "selectedValues" : ["BENTLEY", "FERRARI", "LAMBORGHINI", "MASERATI", "ROLLS ROYCE", "ASTON MARTIN"]
         }
     });
 
