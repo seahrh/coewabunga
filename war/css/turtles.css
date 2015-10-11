@@ -1,14 +1,3 @@
-/* Ads */
-
-.ad {
-	margin: 4em 0 4em 0;
-}
-
-.ad.ad-banner {
-	width: 100%;
-	height: 8em;
-}
-
 /* Custom Styles
 ********************************************************/
 .inline-top {
@@ -40,6 +29,10 @@ p.essay {
 .p-x-30 {
 	padding-left: 30px;
 	padding-right: 30px;
+}
+.m-y-20 {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 /* Google UI CSS Classes
 ********************************************************/
