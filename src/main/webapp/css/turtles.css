@@ -1,15 +1,17 @@
 /* Custom Styles
 ********************************************************/
+.coe__ad {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .inline-top {
 	display: inline-block;
 	vertical-align: top;
 }
-
 p.essay {
 	margin: 2em 0 2em 0;
 	text-align: justify;
 }
-
 .space-top {
 	margin-top: 4em;
 }
