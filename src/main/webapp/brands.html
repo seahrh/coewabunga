@@ -1,119 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <!-- Facebook Open Graph tags -->
-        <meta property="og:title"
-        content="COE Trends" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://coe.sgcharts.com/" />
-        <meta property="og:image" content="http://coe.sgcharts.com/img/coe1.jpg" />
-        <meta property="og:image" content="http://coe.sgcharts.com/img/coe2.jpg" />
-        <meta property="og:image" content="http://coe.sgcharts.com/img/coe3.jpg" />
-        <meta property="og:site_name" content="COE Trends" />
-        <!-- /Facebook Open Graph tags -->
-        <!-- Set title, description and canonical link for SEO -->
-        <title>COE Trends</title>
-        <meta name="description" content="COE Trends - car brands">
-        <link href="http://coe.sgcharts.com/brands.html" rel="canonical">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://storage.googleapis.com/code.getmdl.io/1.1.3/material.purple-cyan.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/turtles.css" type="text/css">
-        <script src="/js/ga.js"></script>
-    </head>
-    <body>
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header">
-                <div class="mdl-layout__header-row">
-                    <!-- Title -->
-                    <span class="mdl-layout-title">SGCharts: COE</span>
-                    <!-- Add spacer, to align navigation to the right -->
-                    <div class="mdl-layout-spacer"></div>
-                    <!-- Navigation. We hide it in small screens. -->
-                    <nav class="mdl-navigation mdl-layout--large-screen-only">
-                        <a class="mdl-navigation__link" href="http://coe.sgcharts.com/">COE</a>
-                        <a class="mdl-navigation__link" href="http://pay.sgcharts.com/">Rat Race</a>
-                        <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/">Outbreak</a>
-                        <a class="mdl-navigation__link" href="http://www.sgcharts.com/hawker-rental">Hawker Rentals</a>
-                        <a class="mdl-navigation__link" href="http://www.sgcharts.com/">About</a>
-                    </nav>
-                </div>
-            </header>
-            <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">SGCharts</span>
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="http://www.sgcharts.com/">About</a>
-                    <div class="divider-x paper-grey-400"></div>
-                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">COE</span>
-                    <a class="mdl-navigation__link" href="http://coe.sgcharts.com/">Prices &amp; Quotas</a>
-                    <a class="mdl-navigation__link" href="http://coe.sgcharts.com/brands.html">Car Brands</a>
-                    <div class="divider-x paper-grey-400"></div>
-                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Rat Race</span>
-                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/age.html">Wages by Age</a>
-                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/industry.html">Wages by Industry</a>
-                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/index.html">University Grads</a>
-                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/diploma.html">Polytechnic Grads</a>
-                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/grad-overview.html">Uni &amp; Poly &amp; ITE</a>
-                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/household.html">Household Income</a>
-                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/macro.html">Citizens' Income</a>
-                    <div class="divider-x paper-grey-400"></div>
-                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Outbreak</span>
-                    <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/">Map</a>
-                    <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/data">Data</a>
-                    <div class="divider-x paper-grey-400"></div>
-                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Hawker Rentals</span>
-                    <a class="mdl-navigation__link" href="http://www.sgcharts.com/hawker-rental">Hawker Rentals</a>
-                </nav>
-            </div>
-            <main class="mdl-layout__content">
-                <div class="page-content container-fluid">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="page-header text-center">
-                                <h1>Car Population <small>By Brand</small></h1>
-                            </div>
-                            <p class="essay">
-                                <a href="http://www.telegraph.co.uk/travel/luxurytravel/8904481/Singapore-playground-of-the-super-rich.html" target="_blank">Singapore: A playground for the super rich</a>
-                            </p>
-                            <div id="car-population" class="dashboard">
-                                <div id="car-population-control1" class="control"></div>
-                                <div id="car-population-chart1" class="chart chart-tall"></div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Facebook Open Graph tags -->
+    <meta property="og:title"
+          content="COE Trends"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://coe.sgcharts.com/"/>
+    <meta property="og:image" content="http://coe.sgcharts.com/img/coe1.jpg"/>
+    <meta property="og:image" content="http://coe.sgcharts.com/img/coe2.jpg"/>
+    <meta property="og:image" content="http://coe.sgcharts.com/img/coe3.jpg"/>
+    <meta property="og:site_name" content="COE Trends"/>
+    <!-- /Facebook Open Graph tags -->
+    <!-- Set title, description and canonical link for SEO -->
+    <title>COE Trends</title>
+    <meta name="description" content="COE Trends - car brands">
+    <link href="http://coe.sgcharts.com/brands.html" rel="canonical">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://storage.googleapis.com/code.getmdl.io/1.1.3/material.purple-cyan.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/turtles.css" type="text/css">
+    <script src="/js/ga.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7844190455015160",
+    enable_page_level_ads: true
+  });
 
-                                <p class="text-muted caption">
-                                    <small>Source: Land Transport Authority, <a
-                                        href="http://www.lta.gov.sg/content/ltaweb/en/publications-and-research.html"
-                                        target="_blank">Total Car Population by Make (2002 - 2012)</a>. Download the <a
-                                        href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdEZkckZ3ekhka3I5aE5qZUpKd2I3VEE&usp=sharing"
-                                        target="_blank">spreadsheet</a>. </small>
-                                </p>
-                            </div>
-                            <blockquote class="space-top">
-                                <p>
-                                    COE-a-bun-ga&nbsp;
-                                    <a href="http://youtu.be/yd-S2Ce7_kI" target="_blank"><span class="glyphicon glyphicon-volume-up"></span></a>&nbsp;&nbsp; <span class="text-muted">[kou-<em>uh</em>-<strong>buhng</strong>-<em>guh</em>]</span>
-                                    <small><em>interjection</em> (a yell of bank-rolling exhilaration, with every newly minted Certificate of Entitlement)</small>
-                                </p>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-                <footer class="mdl-mini-footer">
-                    <div class="mdl-mini-footer__left-section">
-                        <div class="mdl-logo">
-                            Made by Team SGCharts with love. Contact us: admin (at) sgcharts (dot) com.
-                        </div>
-                    </div>
-                </footer>
-            </main>
+    </script>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">SGCharts: COE</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="http://coe.sgcharts.com/">COE</a>
+                <a class="mdl-navigation__link" href="http://pay.sgcharts.com/">Rat Race</a>
+                <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/">Outbreak</a>
+                <a class="mdl-navigation__link" href="http://www.sgcharts.com/hawker-rental">Hawker Rentals</a>
+                <a class="mdl-navigation__link" href="http://www.sgcharts.com/">About</a>
+            </nav>
         </div>
-        <!-- Below the fold -->
-        <!-- Required for loading Google Visualization API -->
-        <script src="//www.google.com/jsapi"></script>
-        <script>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">SGCharts</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="http://www.sgcharts.com/">About</a>
+            <div class="divider-x paper-grey-400"></div>
+            <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">COE</span>
+            <a class="mdl-navigation__link" href="http://coe.sgcharts.com/">Prices &amp; Quotas</a>
+            <a class="mdl-navigation__link" href="http://coe.sgcharts.com/brands.html">Car Brands</a>
+            <div class="divider-x paper-grey-400"></div>
+            <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Rat Race</span>
+            <a class="mdl-navigation__link" href="http://pay.sgcharts.com/age.html">Wages by Age</a>
+            <a class="mdl-navigation__link" href="http://pay.sgcharts.com/industry.html">Wages by Industry</a>
+            <a class="mdl-navigation__link" href="http://pay.sgcharts.com/index.html">University Grads</a>
+            <a class="mdl-navigation__link" href="http://pay.sgcharts.com/diploma.html">Polytechnic Grads</a>
+            <a class="mdl-navigation__link" href="http://pay.sgcharts.com/grad-overview.html">Uni &amp; Poly &amp;
+                ITE</a>
+            <a class="mdl-navigation__link" href="http://pay.sgcharts.com/household.html">Household Income</a>
+            <a class="mdl-navigation__link" href="http://pay.sgcharts.com/macro.html">Citizens' Income</a>
+            <div class="divider-x paper-grey-400"></div>
+            <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Outbreak</span>
+            <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/">Map</a>
+            <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/data">Data</a>
+            <div class="divider-x paper-grey-400"></div>
+            <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Hawker Rentals</span>
+            <a class="mdl-navigation__link" href="http://www.sgcharts.com/hawker-rental">Hawker Rentals</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-header text-center">
+                        <h1>Car Population
+                            <small>By Brand</small>
+                        </h1>
+                    </div>
+                    <p class="essay">
+                        <a href="http://www.telegraph.co.uk/travel/luxurytravel/8904481/Singapore-playground-of-the-super-rich.html"
+                           target="_blank">Singapore: A playground for the super rich</a>
+                    </p>
+                    <div id="car-population" class="dashboard">
+                        <div id="car-population-control1" class="control"></div>
+                        <div id="car-population-chart1" class="chart chart-tall"></div>
+
+                        <p class="text-muted caption">
+                            <small>Source: Land Transport Authority, <a
+                                    href="http://www.lta.gov.sg/content/ltaweb/en/publications-and-research.html"
+                                    target="_blank">Total Car Population by Make (2002 - 2012)</a>. Download the <a
+                                    href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdEZkckZ3ekhka3I5aE5qZUpKd2I3VEE&usp=sharing"
+                                    target="_blank">spreadsheet</a>.
+                            </small>
+                        </p>
+                    </div>
+                    <blockquote class="space-top">
+                        <p>
+                            COE-a-bun-ga&nbsp;
+                            <a href="http://youtu.be/yd-S2Ce7_kI" target="_blank"><span
+                                    class="glyphicon glyphicon-volume-up"></span></a>&nbsp;&nbsp; <span
+                                class="text-muted">[kou-<em>uh</em>-<strong>buhng</strong>-<em>guh</em>]</span>
+                            <small><em>interjection</em> (a yell of bank-rolling exhilaration, with every newly minted
+                                Certificate of Entitlement)
+                            </small>
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">
+                    Made by Team SGCharts with love. Contact us: admin (at) sgcharts (dot) com.
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>
+<!-- Below the fold -->
+<!-- Required for loading Google Visualization API -->
+<script src="//www.google.com/jsapi"></script>
+<script>
             // Loads the Google Visualization libraries
             google.load('visualization', '1', {
                 'packages' : ['controls']
@@ -121,13 +138,15 @@
             google.setOnLoadCallback(function() {
                 Turtles.Viz.Population.Cars.query();
             });
-        </script>
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.1.3/material.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="/js/turtles.js"></script>
-        <script src="js/spin.min.js"></script>
-        <script>
+
+
+</script>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.1.3/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="/js/turtles.js"></script>
+<script src="js/spin.min.js"></script>
+<script>
             // Show a spinning load indicator
             // while the page is loading
             var spinner;
@@ -140,6 +159,8 @@
                 // Once the page is fully loaded, stop spinning
                 Turtles.UI.LoadAnimation.stop(spinner);
             });
-        </script>
-    </body>
+
+
+</script>
+</body>
 </html>
