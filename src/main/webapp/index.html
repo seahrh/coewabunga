@@ -802,7 +802,7 @@
 				.ready(
 						function() {
 							// Once the DOM is loaded, start spinning
-							console.log("start spinning")
+							console.log("start spinning");
 							spinner = Turtles.UI.LoadAnimation.start();
 
 							// Tooltip for date sliders
@@ -819,8 +819,8 @@
 						});
 		$(window).load(function() {
 			// Once the page is fully loaded, stop spinning
+			console.log("stop spinning");
 			Turtles.UI.LoadAnimation.stop(spinner);
-			console.log("stop spinning")
 		});
 
 
