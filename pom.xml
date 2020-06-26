@@ -2,12 +2,12 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
-    <version>4.2</version>
+    <version>4.3</version>
     <groupId>com.sgcharts</groupId>
     <artifactId>coewabunga</artifactId>
     <properties>
         <app.id>coewabunga</app.id>
-        <app.version>v4-2</app.version>
+        <app.version>v4-3</app.version>
         <appengine.version>1.9.64</appengine.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

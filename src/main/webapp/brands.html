@@ -133,38 +133,126 @@
 </div>
 <!-- Below the fold -->
 <!-- Required for loading Google Visualization API -->
-<script src="//www.google.com/jsapi"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-            // Loads the Google Visualization libraries
-            google.load('visualization', '1', {
-                'packages' : ['controls']
-            });
-            google.setOnLoadCallback(function() {
-                Turtles.Viz.Population.Cars.query();
-            });
+  google.charts.load('48', {packages: ['corechart', 'controls']});
+  google.charts.setOnLoadCallback(function() {
+    var Turtles = {};
 
+    Turtles.Viz = {};
 
+    Turtles.Viz.Population = {};
+
+    Turtles.Viz.Population.Cars = {
+        dataSourceUrl : "//spreadsheets.google.com/a/google.com/tq?key=0ArgBv2Jut0VxdEZkckZ3ekhka3I5aE5qZUpKd2I3VEE&headers=1&gid=0"
+
+        // dataSourceUrl :
+        // "//docs.google.com/spreadsheet/pub?key=0ArgBv2Jut0VxdEZkckZ3ekhka3I5aE5qZUpKd2I3VEE&headers=2&gid=0"
+    };
+
+    Turtles.Viz.Population.Cars.query = function() {
+        var query = new google.visualization.Query(Turtles.Viz.Population.Cars.dataSourceUrl);
+
+        query.setQuery("select A, B, C, D, E, F, G, H, I, J, K, L order by A label A 'Brand' options no_format");
+
+        query.send(Turtles.Viz.Population.Cars.dashboard);
+    };
+
+    Turtles.Viz.Population.Cars.dashboard = function(response) {
+
+        var containerId = "car-population";
+
+        var data = response.getDataTable();
+
+        var dashboard = new google.visualization.Dashboard(document.getElementById(containerId));
+
+        var brandControl = new google.visualization.ControlWrapper({
+            "controlType" : "CategoryFilter",
+            "containerId" : containerId + "-control1",
+            "options" : {
+                "filterColumnLabel" : "Brand",
+                "ui" : {
+                    "label" : "Brand",
+                    "labelStacking" : "horizontal",
+                    "allowTyping" : true,
+                    "allowMultiple" : true,
+                    "selectedValuesLayout" : "aside",
+                    "caption" : "start typing..."
+                },
+            },
+            "state" : {
+                "selectedValues" : ["BENTLEY", "FERRARI", "LAMBORGHINI", "MASERATI", "ROLLS ROYCE", "ASTON MARTIN"]
+            }
+        });
+
+        var chart = new google.visualization.ChartWrapper({
+            "containerId" : containerId + "-chart1",
+            "chartType" : "ColumnChart",
+            "options" : {
+                "title" : "Yearly Car Population",
+                "titleTextStyle" : {
+                    "fontSize" : 16
+                },
+                "vAxis" : {
+                    "title" : "",
+                    "textPosition" : "in",
+                    "format" : "#,###"
+                },
+                "hAxis" : {
+                    "textPosition" : "out",
+                    "format" : "",
+                    "textStyle" : {
+                        "fontSize" : 14
+                    }
+                },
+                "legend" : {
+                    "position" : "top",
+                    "alignment" : "left",
+                    "textStyle" : {
+                        "fontSize" : 14
+                    }
+                },
+                "chartArea" : {
+                    "width" : "99%",
+                    "height" : "80%",
+                    "left" : 0,
+                    "top" : 40
+                },
+                "focusTarget" : "category"
+            }
+
+        });
+
+        dashboard.bind([brandControl], [chart]);
+
+        dashboard.draw(data);
+
+    };
+
+    Turtles.Viz.Population.Cars.query();
+
+  });
 </script>
 <script src="https://storage.googleapis.com/code.getmdl.io/1.1.3/material.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="/js/turtles.js"></script>
-<script src="js/spin.min.js"></script>
+<script src="/js/spin.min.js"></script>
 <script>
             // Show a spinning load indicator
             // while the page is loading
             var spinner;
             $(document).ready(function() {
                 // Once the DOM is loaded, start spinning
+                console.log("start spinning");
                 spinner = Turtles.UI.LoadAnimation.start();
 
             });
             $(window).load(function() {
                 // Once the page is fully loaded, stop spinning
+                console.log("start spinning");
                 Turtles.UI.LoadAnimation.stop(spinner);
             });
-
-
 </script>
 </body>
 </html>
